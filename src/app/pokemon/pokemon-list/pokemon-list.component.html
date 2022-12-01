@@ -1,0 +1,47 @@
+<div class="container">
+  <h1 class="mt-5">POKE<span>APP</span></h1>
+  <input
+    type="text"
+    class="form-control mb-3"
+    #inputSearch
+    (keyup)="searchPokemon(inputSearch.value)"
+    placeholder="Buscar..."
+  />
+  <div class="d-flex justify-content-center my-4">
+    <button class="btn btn-light" (click)="prevPage()">
+      <span class="material-symbols-outlined"> arrow_back_ios </span>
+    </button>
+    &nbsp;
+    <button
+      class="btn btn-light"
+      (click)="nextPage()"
+      [disabled]="(pokemonList | filter : page : search).length === 0"
+    >
+      <span class="material-symbols-outlined"> arrow_forward_ios </span>
+    </button>
+  </div>
+  <table class="table mb-5" [ngStyle]="{width:'auto'}" *ngIf="(pokemonList | filter : page : search).length !== 0; else empty">
+    <thead class="table-dark">
+      <tr>
+        <th>N°</th>
+        <th>Nombre</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let pokemon of pokemonList | filter : page : search"
+        [ngStyle]="{ height: '100px' }"
+      >
+        <td [ngStyle]="{ width: '100px' }">{{ pokemon.id }}</td>
+        <td [ngStyle]="{ width: '150px' }">{{ pokemon.name }}</td>
+        <td>
+          <img [src]="pokemon.pic" [alt]="pokemon.name" width="100" height="100"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #empty class="empty">
+    No hay pokemones por mostrar
+  </ng-template>
+</div>
