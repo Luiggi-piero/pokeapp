@@ -1,6 +1,15 @@
-# Pokemon
+# Pokeapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7. 
+</br> 
+Sistema de búsqueda de pokemones con paginación que hace uso de la api pokeapi.co.
+
+- Angular
+- HTML
+- CSS
+- Bootstrap
+
+![pokeapp](https://user-images.githubusercontent.com/86317658/204949627-e0627d99-67e0-4d8c-8d7c-b7c941252da2.png)
 
 ## Development server
 
