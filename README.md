@@ -3,6 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7. 
 </br> 
 Sistema de búsqueda de pokemones con paginación que hace uso de la api pokeapi.co.
+</br>
+Puede ver el proyecto en el siguiente enlace :globe_with_meridians: https://pokemonnweb.netlify.app
 
 - Angular
 - HTML
